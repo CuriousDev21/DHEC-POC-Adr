@@ -87,15 +87,6 @@ app/
                 |-- MainApp.kt
         |-- res/
             |-- AndroidManifest.xml
-    |-- test/
-        |-- java/
-            |-- com.example.myhealthassistant/
-                |-- dispatchers/
-                    |-- MainDispatcherRule.kt
-                |-- domain/
-                    |-- consent/
-                        |-- usecase/
-                            |-- GrantConsentUseCaseTest.kt
 ```
 
 #### Key Final Product Features
