@@ -98,7 +98,7 @@ app/
                             |-- GrantConsentUseCaseTest.kt
 ```
 
-#### Key Target Features
+#### Key Final Product Features
 
 - **Secure File Management:** Files are uploaded and synchronized across devices post-consent.
 - **FHIR Integration:** Adopts FHIR resources such as `DocumentReference` and `Consent` for data representation.
@@ -164,6 +164,15 @@ analyze:
   script:
     - fastlane run swiftlint
     - fastlane run ktlint
+
+sonarcloud_scan:
+  stage: analyze
+  image:
+    name: sonarsource/sonar-scanner-cli:latest
+    entrypoint: [""]
+  script:
+    - sonar-scanner -Dsonar.projectKey=dhec_key -Dsonar.organization=dhec_key -Dsonar.sources=./src -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+  allow_failure: true
 
 deploy_beta:
   stage: deploy
