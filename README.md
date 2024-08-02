@@ -1,3 +1,4 @@
+
 # DHEC-POC-Adr
 ### MyHealthAssistant POC Application - README
 
@@ -173,4 +174,13 @@ deploy_beta:
   when: manual
 ```
 
-This README provides an overview of the project structure, key components, and the CI/CD process. The setup ensures a robust and secure file management system aligned with healthcare standards, focusing on modularity, testability, and maintainability.
+
+Future Considerations:
+
+ - [ ] Add biometric keypair generation for end to end encryption mechanism and server exchange with a trusted cert store
+ - [ ] Expand Further Endpoints for FIHR Tasks creation and interactions
+ - [ ] Replace Mocked Persistence with an Encrypted Realm Instance
+ - [ ] Extend the cryptographic utils to interact with the secure enclave/keystore/encryptedshared storage
+ - [ ] add fallback mechanism in case no real time (WSS) connection is available for the sync events.
+ - [ ] Add sync conflict resolutions
+
